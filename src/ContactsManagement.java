@@ -36,7 +36,7 @@ public class ContactsManagement {
     }
 
     public void addContacts() {
-        System.out.println("[\uD83D\uDD11] Mời bạn nhập thông tin:");
+        System.out.println("Mời bạn nhập thông tin:");
         System.out.println("--------------------");
         String phoneNumber = enterPhoneNumber();
         System.out.println("Nhập tên nhóm:");
@@ -67,7 +67,7 @@ public class ContactsManagement {
         }
         Contacts contacts = new Contacts(phoneNumber, group, name, getGender(gender), address, dateOfBirth, email);
         contactsList.add(contacts);
-//        writeFile(contactList, PATH_NAME);
+        writeFile(contactsList, PATH_NAME);
         System.out.println(" Thêm " + phoneNumber + " đã vào danh bạ ");
         System.out.println("--------------------");
     }
@@ -98,7 +98,7 @@ public class ContactsManagement {
             editContact.setDateOfBirth(dateOfBirth);
             editContact.setEmail(enterEmail());
             contactsList.set(index, editContact);
-//            writeFile(contactList, PATH_NAME);
+            writeFile(contactsList, PATH_NAME);
             System.out.println(" Sửa " + phoneNumber + " thành công !");
             System.out.println("--------------------");
         } else {

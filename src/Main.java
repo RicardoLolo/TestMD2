@@ -3,6 +3,4 @@ public class Main {
         RunningSystem runningSystem = new RunningSystem();
         runningSystem.menuOfSystem();
     }
-
-    private Main() {}
 }

@@ -33,10 +33,11 @@ public class RunningSystem {
                     case 1:
                         contactsManagement.displayAll();
                         break;
-                    case 2:
-                        contactsManagement.addContact();
-                        break;
                     case 3:
+                        contactsManagement.addContacts();
+                        System.out.println("Hello");
+                        break;
+                    case 2:
                         System.out.println(" Nhập số điện thoại cần sửa (+84)-933334444:");
                         String phoneEdit = scanner.nextLine();
                         if (phoneEdit.equals("")) {
@@ -61,7 +62,7 @@ public class RunningSystem {
                         break;
                     case 6:
                         ArrayList<Contacts> contactArrayList = contactsManagement.readFile(ContactsManagement.PATH_NAME);
-                        ((ArrayList<?>) contactArrayList).forEach(System.out::println);
+                        contactArrayList.forEach(System.out::println);
                         System.out.println(" đọc thành công !");
                         System.out.println("--------------------");
                         break;
